@@ -11,7 +11,7 @@
     <summary>An open source IDE for Java (SE) development supporting Java 8.</summary>
     <description>NetBeans provides an extensible IDE with rich functionality for Java development, such as code analyzers, refactoring tools and converters, which upgrade old language constructs to newer Java 8 concepts in your code (e.g. lambdas, functional operations and method references).</description>
     <projectUrl>https://netbeans.org/</projectUrl>
-    <tags>netbeans admin</tags>
+    <tags>netbeans java ide development</tags>
     <copyright>(c) 1997, 2014, Oracle and/or its affiliates</copyright>
     <licenseUrl>https://netbeans.org/about/legal/product-licences.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
