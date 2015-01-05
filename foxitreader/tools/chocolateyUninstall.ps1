@@ -1,13 +1,26 @@
-function Get-X86ProgramFiles {
-	if (Test-Path "Env:\ProgramFiles(x86)") {
-		return ${env:programfiles(x86)}
+function Get-UninstallString {
+	$regPath = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Foxit Reader_is1'
+	$key = Get-Item -Path $regPath -ErrorAction Stop
+	$uninstallString = $key.GetValue('UninstallString')
+	
+	if ($uninstallString) {
+		return $uninstallString
 	}
 	else {
-		return ${env:programfiles}
+		throw [System.IO.FileNotFoundException] "Uninstall string not found in `"$regPath`"."
 	}
 }
 
-$uninstallExe = Join-Path $(Get-X86ProgramFiles) "Foxit Software\Foxit Reader\unins000.exe"
-$uninstallArgs = '/verysilent'
-$validExitCodes = @(0)
-Start-ChocolateyProcessAsAdmin $uninstallArgs $uninstallExe -validExitCodes $validExitCodes
+$packageName = 'Foxit Reader'
+
+try {
+	$uninstallArgs = '/verysilent'
+	$validExitCodes = @(0)
+	Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
+	
+	Write-ChocolateySuccess $packageName
+}
+catch {
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
+}
