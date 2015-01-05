@@ -7,7 +7,8 @@
     <authors>Foxit Software</authors>
     <owners>ComFreek H. Alan Stevens</owners>
     <summary>Foxit Reader: The Best PDF Reader</summary>
-    <description>Foxit Reader: The Best PDF Reader. With Foxit Reader you can read and annotate PDF documents and fill out PDF forms.</description>
+    <description>Foxit Reader: The Best PDF Reader. With Foxit Reader you can read and annotate PDF documents and fill out PDF forms.
+Only the English version is provided because it is bundled with the highest version of Foxit Reader among all languages.</description>
     <projectUrl>http://foxitsoftware.com/Secure_PDF_Reader/</projectUrl>
     <tags>Foxit PDF Reader office admin</tags>
     <licenseUrl>http://www.foxitsoftware.com/Secure_PDF_Reader/eula.html</licenseUrl>
