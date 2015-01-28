@@ -1,21 +1,26 @@
 function Get-UninstallString {
-	$processor = Get-WmiObject Win32_Processor 
-	$is64bit = $processor.AddressWidth -eq 64 
-
 	# for 32-bit systems
 	$regPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Foxit Reader_is1'
-	if ($is64bit) {
+	if (Get-ProcessorBits 64) {
+		# for 64-bit systems
 		$regPath = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Foxit Reader_is1'
 	}
 
-	$key = Get-Item -Path $regPath -ErrorAction Stop
-	$uninstallString = $key.GetValue('UninstallString')
+	$regKey = Get-Item -Path $regPath -ErrorAction SilentlyContinue
+	if ($regKey -eq $null) {
+		Write-Warning "Uninstall entry in registry could not be found: `"$regPath`""
+		return $null
+	}
+
+	$uninstallStringKey = "UninstallString"
+	$uninstallString = $regKey.GetValue($uninstallStringKey)
 
 	if ($uninstallString) {
 		return $uninstallString
 	}
 	else {
-		throw [System.IO.FileNotFoundException] "Uninstall string not found in `"$regPath`"."
+		Write-Warning "Uninstall string not found in `"" + (Join-Path $regPath $uninstallStringKey) + "`"."
+		return $null
 	}
 }
 
@@ -24,7 +29,15 @@ $packageName = 'Foxit Reader'
 try {
 	$uninstallArgs = '/verysilent'
 	$validExitCodes = @(0)
-	Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
+	$uninstallString = $(Get-UninstallString)
+	
+	if ($uninstallString) {
+		Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
+	}
+	else {
+		Write-Warning "FoxitReader could not be uninstalled by this script."
+		Write-Warning "The Chocolatey package is removed nonetheless in case you have already uninstalled FoxitReader yourself."
+	}
 	
 	Write-ChocolateySuccess $packageName
 }
