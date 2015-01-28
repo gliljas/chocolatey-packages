@@ -8,7 +8,9 @@
     <owners>ComFreek H. Alan Stevens</owners>
     <summary>Foxit Reader: The Best PDF Reader</summary>
     <description>Foxit Reader: The Best PDF Reader. With Foxit Reader you can read and annotate PDF documents and fill out PDF forms.
-Only the English version is provided because it is bundled with the highest version of Foxit Reader among all languages.</description>
+Notes:
+1) Only the English version is provided because it is bundled with the highest version of Foxit Reader among all languages.
+2) Foxit Reader comes bundled with Foxit Cloud. This is (to the best of our knowledge) not malware or adware. It provides cloud functionality to store PDFs online. Leaving it installed when not using it should be totally harmless.</description>
     <projectUrl>http://foxitsoftware.com/Secure_PDF_Reader/</projectUrl>
     <tags>Foxit PDF Reader office admin</tags>
     <licenseUrl>http://www.foxitsoftware.com/Secure_PDF_Reader/eula.html</licenseUrl>
