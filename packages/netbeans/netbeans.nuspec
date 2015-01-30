@@ -18,7 +18,7 @@
     <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/779f5c96f817ed1fa0d76fd90841873dc6c0ba74/icons/netbeans.png</iconUrl>
     <dependencies>
 			<dependency id="jdk8" />
-		</dependencies>
+	</dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
