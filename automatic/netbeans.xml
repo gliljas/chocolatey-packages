@@ -75,7 +75,7 @@
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>94134224</LastFileSize>
-    <LastFileDate>2015-01-29T15:16:41.9000021</LastFileDate>
+    <LastFileDate>2015-01-31T14:14:00.3152409</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -104,20 +104,6 @@
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>""</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -129,9 +115,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-29T15:16:41.9000021</LastUpdated>
+    <LastUpdated>2015-01-31T14:14:00.3152409</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.netbeans.org/netbeans/8.0.2/final/bundles/netbeans-8.0.2-javase-windows.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.netbeans.org/netbeans/8.0.2/final/bundles/netbeans-{version}-javase-windows.exe</FixedDownloadUrl>
     <Name>netbeans</Name>
   </ApplicationJob>
 </Jobs>
