@@ -26,22 +26,14 @@ function Get-UninstallString {
 
 $packageName = 'Foxit Reader'
 
-try {
-	$uninstallArgs = '/verysilent'
-	$validExitCodes = @(0)
-	$uninstallString = $(Get-UninstallString)
+$uninstallArgs = '/verysilent'
+$validExitCodes = @(0)
+$uninstallString = $(Get-UninstallString)
 	
-	if ($uninstallString) {
-		Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
-	}
-	else {
-		Write-Warning "FoxitReader could not be uninstalled by this script."
-		Write-Warning "The Chocolatey package is removed nonetheless in case you have already uninstalled FoxitReader yourself."
-	}
-	
-	Write-ChocolateySuccess $packageName
+if ($uninstallString) {
+	Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
 }
-catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw
+else {
+	Write-Warning "FoxitReader could not be uninstalled by this script."
+	Write-Warning "The Chocolatey package is removed nonetheless in case you have already uninstalled FoxitReader yourself."
 }
