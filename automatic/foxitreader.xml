@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>35984520</LastFileSize>
-    <LastFileDate>2015-01-31T14:11:54.6815457</LastFileDate>
+    <LastFileSize>43572376</LastFileSize>
+    <LastFileDate>2015-07-29T11:05:27.4421113</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,9 +24,9 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.foxitsoftware.com/downloads/require/getPackage.php?product=Foxit-Reader&amp;platform=Windows&amp;os=Windows</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>select name="version"[^&gt;]+&gt;\s*&lt;option value="([^"]+)"</Regex>
+            <Url>https://www.foxitsoftware.com/downloads/downloadForm.php?product=Foxit-Reader&amp;language=English&amp;platform=Windows</Url>
             <StartText>"version":["</StartText>
             <EndText>",</EndText>
             <Name>version</Name>
@@ -40,11 +40,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\FoxitReader706.1126_enu_Setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\FoxitReader720.0722_enu_Setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-31T14:11:54.6815457</LastUpdated>
+    <LastUpdated>2015-07-29T11:05:27.4421113</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&amp;platform=Windows&amp;version={version}&amp;package_type=exe&amp;language=English</FixedDownloadUrl>
     <Name>foxitreader</Name>
