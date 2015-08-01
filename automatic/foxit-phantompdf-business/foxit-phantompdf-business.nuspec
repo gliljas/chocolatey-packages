@@ -24,7 +24,7 @@ let them know the package is no longer updating correctly.</description>
     <!--<copyright></copyright>-->
     <licenseUrl>https://www.foxitsoftware.com/pdf-editor/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/1e5556d58a82533380692b78b71af626263c1ed2/icons/foxit-phantompdf-standard.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/aa0b62b9329d5989d03b139286cc37f938a846b6/icons/foxit-phantompdf-business.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
