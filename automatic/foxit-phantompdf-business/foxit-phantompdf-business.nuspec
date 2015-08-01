@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>foxit-phantompdf-business</id>
+    <title>foxit-phantompdf-business (Install)</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Foxit Software</authors>
+    <owners>ComFreek</owners>
+    <summary>PDF editor enabling one to create, edit, comment, collaborate and share, secure, organize, export, scan and OCR, and sign PDF documents and forms.</summary>
+    <description>Commercial PDF editor enabling one to create, edit, comment, collaborate and share, secure, organize, export, scan and OCR, and sign PDF documents and forms. In addition to PhantomPDF's standard version, it offers advanced editing, shared review initiation, higher security, additional file compression, PDF A/E/X creation, and bates numbering.
+The trial period lasts 30 days after which you need an activation key. Despite the trial period, it may happen that you are requested to activated the product upon first start. In this case, simply close the window and re-start Foxit PhantomPDF Business.
+
+Note that only the English version is provided because it is bundled with the highest version of Foxit PhantomPDF Business among all languages.
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.</description>
+    <projectUrl>http://www.foxitsoftware.com/pdf-editor/</projectUrl>
+    <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>http://tickets.foxitsoftware.com/create.php</bugTrackerUrl>
+    <tags>foxit-phantompdf-business foxit pdf phantompdf admin</tags>
+    <!--<copyright></copyright>-->
+    <licenseUrl>https://www.foxitsoftware.com/pdf-editor/eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/1e5556d58a82533380692b78b71af626263c1ed2/icons/foxit-phantompdf-standard.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <!--
+      We could possibly load them from here (integrate that function in the Ketarin process)
+      <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+    -->
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
