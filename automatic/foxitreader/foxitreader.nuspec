@@ -13,6 +13,8 @@ Notes:
 1) Only the English version is provided because it is bundled with the highest version of Foxit Reader among all languages.
 2) Foxit Reader comes bundled with Foxit Cloud. This is (to the best of our knowledge) not malware or adware. It provides cloud functionality to store PDFs online. Leaving it installed when not using it should be totally harmless.</description>
     <projectUrl>http://foxitsoftware.com/Secure_PDF_Reader/</projectUrl>
+    <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
+    <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/automatic/foxitreader</packageSourceUrl>
     <tags>Foxit PDF Reader office admin</tags>
     <licenseUrl>http://www.foxitsoftware.com/Secure_PDF_Reader/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
