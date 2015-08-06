@@ -19,6 +19,7 @@ let them know the package is no longer updating correctly.</description>
     <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>http://tickets.foxitsoftware.com/create.php</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/automatic/foxit-phantompdf-standard</packageSourceUrl>
     <tags>foxit-phantompdf-standard foxit pdf phantompdf admin</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>https://www.foxitsoftware.com/pdf-editor/eula.html</licenseUrl>
