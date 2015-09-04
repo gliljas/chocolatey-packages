@@ -48,12 +48,15 @@ if ($passedLanguage -and $availableLanguages.ContainsKey($passedLanguage)) {
 	$installLanguage = $passedLanguage
 }
 
-$url = 'http://mh-nexus.de/downloads/HxDSetup' + $availableLanguages.Get_Item($installLanguage) + '.zip'
+$url = 'ftp://mh-nexus.de/HxDSetup' + $availableLanguages.Get_Item($installLanguage) + '.zip'
 
-Get-ChocolateyWebFile $packageName $zipLocation $url -checksum $checksum -checksumType $checksumType
+# Public account details extracted from the official download page
+$username = 'wa651f5'
+$password = 'anonymous'
 
+Write-Host "Downloading $url"
+Get-FtpFile $url $zipLocation 'wa651f5' 'anonymous' $false
 Get-ChocolateyUnzip $zipLocation $toolsDir
-
 Install-ChocolateyPackage $packageName 'exe' '/silent' $setupLocation -registryUninstallerKey 'HxD Hex Editor_is1'
 
 Remove-Item $zipLocation
