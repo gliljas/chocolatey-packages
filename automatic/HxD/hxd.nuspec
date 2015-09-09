@@ -34,7 +34,7 @@ Run `choco install hxd -packageParameters "lang=en"`. You can replace 'en' by th
     <copyright>Copyright © 2003-2015 Maël Hörz</copyright>
     <licenseUrl>http://mh-nexus.de/en/about.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/hxd.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/201009c4aa15f7ff762b73a390e7ea29cf2fcf5e/icons/HxD.png</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
