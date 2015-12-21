@@ -16,7 +16,7 @@ Notes:
     <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
     <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/automatic/foxitreader</packageSourceUrl>
     <tags>Foxit PDF Reader office admin</tags>
-    <licenseUrl>http://www.foxitsoftware.com/Secure_PDF_Reader/eula.html</licenseUrl>
+    <licenseUrl>https://www.foxitsoftware.com/products/pdf-reader/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/695c150e199b34151a923fa4953e46c3065a2e30/icons/FoxitReader.png</iconUrl>
   </metadata>
