@@ -15,6 +15,7 @@ Notes:
     <projectUrl>http://foxitsoftware.com/Secure_PDF_Reader/</projectUrl>
     <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
     <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/automatic/foxitreader</packageSourceUrl>
+    <releaseNotes>https://www.foxitsoftware.com/products/pdf-reader/version-history.php</releaseNotes>
     <tags>Foxit PDF Reader office admin</tags>
     <licenseUrl>https://www.foxitsoftware.com/products/pdf-reader/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
