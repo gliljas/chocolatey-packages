@@ -12,14 +12,14 @@ function Get-UninstallString {
 		return $null
 	}
 
-	$uninstallStringKey = "UninstallString"
+	$uninstallStringKey = 'UninstallString'
 	$uninstallString = $regKey.GetValue($uninstallStringKey)
 
 	if ($uninstallString) {
 		return $uninstallString
 	}
 	else {
-		Write-Warning "Uninstall string not found in `"" + (Join-Path $regPath $uninstallStringKey) + "`"."
+		Write-Warning 'Uninstall string not found in "' + (Join-Path $regPath $uninstallStringKey) + '".'
 		return $null
 	}
 }
@@ -34,6 +34,6 @@ if ($uninstallString) {
 	Start-ChocolateyProcessAsAdmin $uninstallArgs $(Get-UninstallString) -validExitCodes $validExitCodes
 }
 else {
-	Write-Warning "FoxitReader could not be uninstalled by this script."
-	Write-Warning "The Chocolatey package is removed nonetheless in case you have already uninstalled FoxitReader yourself."
+	Write-Warning 'FoxitReader could not be uninstalled by this script.'
+	Write-Warning 'The Chocolatey package is removed nonetheless in case you have already uninstalled FoxitReader yourself.'
 }

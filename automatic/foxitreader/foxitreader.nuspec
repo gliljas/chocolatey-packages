@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>foxitreader</id>
     <title>Foxit Reader</title>
-    <version>{{PackageVersion}}</version>
+    <version>8.0.2.805</version>
     <authors>Foxit Software</authors>
     <owners>ComFreek H.AlanStevens</owners>
     <summary>Foxit Reader: The Best PDF Reader</summary>
