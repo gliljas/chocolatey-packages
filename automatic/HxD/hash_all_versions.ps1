@@ -18,10 +18,11 @@ $json = $availableLanguages.Keys | % {
 	$password = 'anonymous'
 
 	$actualLangCode = $availableLanguages.Get_Item($_)
-	$uri = "ftp://${username}:${password}@mh-nexus.de/HxDSetup${actualLangCode}.zip"
+	$uri = "ftp://mh-nexus.de/HxDSetup${actualLangCode}.zip"
+	$uriWithCredentials = "ftp://${username}:${password}@mh-nexus.de/HxDSetup${actualLangCode}.zip"
 	
 	$tempFile = [System.IO.Path]::GetTempFileName()
-	Invoke-WebRequest -Uri $uri -OutFile $tempFile -UserAgent "Update checker of Chocolatey Community Package 'HxD'"
+	Invoke-WebRequest -Uri $uriWithCredentials -OutFile $tempFile -UserAgent "Update checker of Chocolatey Community Package 'HxD'"
 	
 	$entry = @{lang = $_; uri = $uri; hash = (Get-FileHash $tempFile -Algorithm 'SHA256').Hash}
 	Remove-Item $tempFile
