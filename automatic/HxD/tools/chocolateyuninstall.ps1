@@ -14,6 +14,12 @@ $file = @($local_key, $local_key6432, $machine_key, $machine_key6432) `
 	| Get-ItemProperty `
 	| Select-Object -ExpandProperty UninstallString
 
+# The registry value contains e.g. "C:\Program Files (x86)\HxD\unins000.exe"
+# (incl. quotes!; the installation path might differ, of course).
+# Chocolatey will emit a warning because [System.IO.File]::Exists() will return
+# false on that path.
+$file = $file.Trim(@('"'))
+
 if ($file -eq $null -or $file -eq '') {
 	Write-Host "$packageName has already been uninstalled by other means."
 	Write-Host 'The registry uninstall entry does not exist (anymore).'
