@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>HxD</id>
     <title>HxD - Hex Editor and Disk Editor (Install)</title>
-    <version>1.7.7.0001</version>
+    <version>1.7.7.020160827</version>
     <authors>Maël Hörz</authors>
     <owners>Matthew Manela,ComFreek</owners>
     <summary>HxD is a carefully designed and fast hex editor which, additionally to raw disk editing and modifying of main memory (RAM), handles files of any size.</summary>
