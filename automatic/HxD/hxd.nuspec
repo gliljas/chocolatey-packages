@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-    <id>hxd</id>
+    <id>HxD</id>
     <title>HxD - Hex Editor and Disk Editor (Install)</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.7.7.0001</version>
     <authors>Maël Hörz</authors>
     <owners>Matthew Manela,ComFreek</owners>
     <summary>HxD is a carefully designed and fast hex editor which, additionally to raw disk editing and modifying of main memory (RAM), handles files of any size.</summary>
@@ -35,7 +35,7 @@ Run `choco install hxd -packageParameters "lang=en"`. You can replace 'en' by th
     <licenseUrl>http://mh-nexus.de/en/about.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/201009c4aa15f7ff762b73a390e7ea29cf2fcf5e/icons/HxD.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://mh-nexus.de/en/hxd/changelog.php</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

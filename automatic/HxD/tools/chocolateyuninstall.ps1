@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $packageName = 'HxD'
 $registryUninstallerKeyName = 'HxD Hex Editor_is1'
@@ -21,7 +21,7 @@ if ($file -eq $null -or $file -eq '') {
 }
 
 $installerType = 'EXE' 
-$silentArgs = '/silent'
+$silentArgs = '/verysilent'
 $validExitCodes = @(0)
 
 if ($shouldUninstall) {
