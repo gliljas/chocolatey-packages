@@ -18,7 +18,7 @@ function global:au_GetLatest {
 	# Package fix notation because the software actually uses 4 segments
 	# Unless the third segment is increased, we always have to append our suffix.
 	if ($version.StartsWith('1.7.7.')) {
-		$version = $version + '20160827'
+		$version = $version + '20160904'
 	}
 
 	return @{ Version = $version }

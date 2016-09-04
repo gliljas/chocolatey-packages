@@ -13,7 +13,7 @@ $scriptPath = split-path -parent $MyInvocation.MyCommand.Definition
 
 $availableLanguages = Get-AvailableLanguages
 
-$json = $availableLanguages.Keys | % {
+$document = $availableLanguages.Keys | % {
 	$username = 'wa651f5'
 	$password = 'anonymous'
 
@@ -30,4 +30,4 @@ $json = $availableLanguages.Keys | % {
 	$entry
 } | ConvertTo-Json
 
-[IO.File]::WriteAllLines("$scriptPath\tools\hashes.json", $json)
+[IO.File]::WriteAllLines("$scriptPath\tools\hashes.json", $document)

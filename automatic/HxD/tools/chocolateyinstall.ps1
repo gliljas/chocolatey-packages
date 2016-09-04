@@ -1,5 +1,25 @@
 $ErrorActionPreference = 'Stop';
 
+if (Get-Command ConvertFrom-Json -errorAction SilentlyContinue) {
+
+	# Following ConvertFrom-Json polyfill is based on http://stackoverflow.com/a/29689642
+	# Thanks to its author Edward (http://stackoverflow.com/users/2934838/edward)
+	# License is CC BY-SA 3.0
+
+	Add-Type -Assembly System.Web.Extensions
+	function ConvertFrom-Json {
+		param(
+			[Parameter(ValueFromPipeline = $true)] $json
+		)
+
+		$ps_js = New-Object System.Web.Script.Serialization.JavaScriptSerializer
+
+		# The comma operator is the array construction operator in PowerShell
+		return ,$ps_js.DeserializeObject($json)
+	}
+}
+
+
 $packageName = 'HxD'
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
