@@ -37,6 +37,8 @@ Run `choco install hxd -packageParameters "lang=en"`. You can replace 'en' by th
 		<iconUrl>https://cdn.rawgit.com/ComFreek/chocolatey-packages/201009c4aa15f7ff762b73a390e7ea29cf2fcf5e/icons/HxD.png</iconUrl>
 		<releaseNotes>https://mh-nexus.de/en/hxd/changelog.php</releaseNotes>
 		<dependencies>
+			<!-- Chocolatey 0.90.10.x guarantees us .NET 4.0 which allows us to use the ConvertFrom-Json polyfill,
+			     which depends on .NET 3.5, in chocolateyInstall.ps1 -->
 			<dependency id="chocolatey" version="0.9.10.0" />
 		</dependencies>
 	</metadata>

@@ -1,11 +1,12 @@
 $ErrorActionPreference = 'Stop';
 
-if (Get-Command ConvertFrom-Json -errorAction SilentlyContinue) {
+if (-not(Get-Command ConvertFrom-Json -ErrorAction SilentlyContinue)) {
 
 	# Following ConvertFrom-Json polyfill is based on http://stackoverflow.com/a/29689642
 	# Thanks to its author Edward (http://stackoverflow.com/users/2934838/edward)
 	# License is CC BY-SA 3.0
 
+	# This requires .NET 3.5, we therefore depend on Chocolatey 0.9.10.x in the nuspec file
 	Add-Type -Assembly System.Web.Extensions
 	function ConvertFrom-Json {
 		param(
@@ -55,7 +56,7 @@ $password = 'anonymous'
 
 $url = "ftp://mh-nexus.de/HxDSetup$($availableLanguages.Get_Item($installLanguage)).zip"
 
-$checksum = ((Get-Content $hashLocation -Raw | ConvertFrom-Json) | Where-Object { $_.lang -eq $installLanguage }).hash
+$checksum = ((Get-Content $hashLocation | Out-String | ConvertFrom-Json) | Where-Object { $_.lang -eq $installLanguage }).hash
 $checksumType = 'sha256'
 
 $ftpFileArgs = @{
