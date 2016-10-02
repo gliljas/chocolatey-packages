@@ -50,25 +50,20 @@ if ($passedLanguage -and $availableLanguages.ContainsKey($passedLanguage)) {
 	$installLanguage = $passedLanguage
 }
 
-# Public account details extracted from the official download page
-$username = 'wa651f5'
-$password = 'anonymous'
-
-$url = "ftp://mh-nexus.de/HxDSetup$($availableLanguages.Get_Item($installLanguage)).zip"
+$url = "https://mh-nexus.de/downloads/HxDSetup$($availableLanguages.Get_Item($installLanguage)).zip" 
 
 $checksum = ((Get-Content $hashLocation | Out-String | ConvertFrom-Json) | Where-Object { $_.lang -eq $installLanguage }).hash
 $checksumType = 'sha256'
 
-$ftpFileArgs = @{
+$webArgs = @{
+	packageName  = $packageName
+	fileFullPath = $zipLocation
 	url          = $url
-	filename     = $zipLocation
-	username     = $username
-	password     = $password
+	checksum     = $checksum
+	checksumType = $checksumType
 }
 
-# Cannot use Get-ChocolateyWebFile as it currently doesn't support authentication via username + password
-Get-FtpFile @ftpFileArgs
-Get-ChecksumValid -File $zipLocation -Checksum $checksum -ChecksumType $checksumType -OriginalUrl $url
+Get-ChocolateyWebFile @webArgs
 Get-ChocolateyUnzip $zipLocation $toolsDir
 Install-ChocolateyPackage $packageName 'exe' '/silent' $setupLocation -registryUninstallerKey 'HxD Hex Editor_is1'
 
