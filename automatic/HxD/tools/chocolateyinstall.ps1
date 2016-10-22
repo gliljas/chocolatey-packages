@@ -65,7 +65,7 @@ $webArgs = @{
 
 Get-ChocolateyWebFile @webArgs
 Get-ChocolateyUnzip $zipLocation $toolsDir
-Install-ChocolateyPackage $packageName 'exe' '/silent' $setupLocation -registryUninstallerKey 'HxD Hex Editor_is1'
+Install-ChocolateyPackage $packageName 'exe' '/silent' $setupLocation
 
 Remove-Item $zipLocation
 Remove-Item $setupLocation
