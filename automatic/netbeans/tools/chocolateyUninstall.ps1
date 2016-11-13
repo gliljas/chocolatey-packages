@@ -1,7 +1,7 @@
-﻿$version = '8.2.0.20161113'
+﻿$netbeansVersion = '8.2'
 
 function Get-UninstallString {
-  $regPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-base-$version*"
+  $regPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-base-$netbeansVersion*"
   $key = Get-Item -Path $regPath -ErrorAction Stop
 
   if (-not($key -eq $null) -and -not(($uninstallString = $key.GetValue('UninstallString')) -eq $null)) {

@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 			"(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
 		}
 		'tools\chocolateyUninstall.ps1' = @{
-			"(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+			"(^[$]netbeansVersion\s*=\s*)('.*')" = "`$1'$($Latest.NetbeansVersion)'"
 		}
 	}
 }
@@ -29,7 +29,12 @@ function global:au_GetLatest {
 	# See https://www.win.tue.nl/hashclash/SoftIntCodeSign/
 
 	return @{
+		# The actual version
+		NetbeansVersion = $version
+
+		# The package version (it might differ by a version fix suffix)
 		Version = $version
+
 		URL32 = $finalUri
 	}
 }
