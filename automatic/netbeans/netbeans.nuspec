@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if â€œÎ©â€ doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
 		<id>netbeans</id>
 		<title>NetBeans Java SE</title>
-		<version>8.2</version>
+		<version>8.2.0.20161113</version>
 		<authors>Oracle Corporation</authors>
 		<owners>ComFreek murray</owners>
 		<summary>An open source IDE for Java (SE) development supporting Java 8.</summary>

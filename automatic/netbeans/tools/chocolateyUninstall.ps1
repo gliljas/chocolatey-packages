@@ -1,4 +1,4 @@
-$version = '8.2'
+﻿$version = '8.2.0.20161113'
 
 function Get-UninstallString {
   $regPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-base-$version*"
