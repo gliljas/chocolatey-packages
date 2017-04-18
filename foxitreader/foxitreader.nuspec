@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>foxitreader</id>
     <title>Foxit Reader</title>
-    <version>8.1.0.1013</version>
+    <version>8.3.0.14878</version>
     <authors>Foxit Software</authors>
     <owners>ComFreek H.AlanStevens</owners>
     <summary>Foxit Reader: The Best PDF Reader</summary>
@@ -14,7 +14,7 @@ Notes:
 2) Foxit Reader comes bundled with Foxit Cloud. This is (to the best of our knowledge) not malware or adware. It provides cloud functionality to store PDFs online. Leaving it installed when not using it should be totally harmless.</description>
     <projectUrl>http://foxitsoftware.com/Secure_PDF_Reader/</projectUrl>
     <docsUrl>https://www.foxitsoftware.com/support/usermanuals.php</docsUrl>
-    <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/automatic/foxitreader</packageSourceUrl>
+    <packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/foxitreader</packageSourceUrl>
     <releaseNotes>https://www.foxitsoftware.com/products/pdf-reader/version-history.php</releaseNotes>
     <tags>Foxit PDF Reader office admin</tags>
     <licenseUrl>https://www.foxitsoftware.com/products/pdf-reader/eula.html</licenseUrl>

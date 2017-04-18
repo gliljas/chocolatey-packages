@@ -1,5 +1,5 @@
 *.nupkg
-automatic/_output/
-automatic/api_key
-automatic/update_info.xml
-automatic/Update-AUPackages.md
+update_vars.ps1
+Update-AUPackages.md
+update_info.xml
+api_key
