@@ -19,11 +19,6 @@ function global:au_GetLatest {
 	$version = Get-FixedQuerySelectorAll $page "select[name='version'] option:first-child" | Select -First 1 -ExpandProperty value
 	
 	$url32 = "https://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=$version&package_type=exe&language=English"
-	
-	# Fix notation to provide first release with a checksum
-	if ($version.StartsWith("8.0.2.805")) {
-		$version += "01";
-	}
 
 	return @{ URL32 = $url32; Version = $version }
 }
