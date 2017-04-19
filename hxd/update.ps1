@@ -14,12 +14,6 @@ function global:au_GetLatest {
 	$page = Invoke-WebRequest -Uri $uri -UserAgent "Update checker of Chocolatey Community Package 'HxD'"
 	
 	$version = Get-FixedQuerySelectorAll $page "tr td:first-child" | Select -First 1 -ExpandProperty innerText
-	
-	# Package fix notation because the software actually uses 4 segments
-	# Unless the third segment is increased, we always have to append our suffix.
-	if ($version.StartsWith('1.7.7.')) {
-		$version = $version + '20161002'
-	}
 
 	return @{ Version = $version }
 }
