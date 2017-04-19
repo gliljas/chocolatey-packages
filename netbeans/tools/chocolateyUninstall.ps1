@@ -16,7 +16,7 @@ $uninstallArgs = @{
 	packageName    = 'netbeans'
 	fileType       = 'exe'
 	silentArgs     = '--silent'
-	file           = (Get-UninstallString).Trim(@('"'))
+	file           = Get-UninstallString
 	validExitCodes = @(0)
 }
 
