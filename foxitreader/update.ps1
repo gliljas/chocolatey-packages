@@ -20,7 +20,21 @@ function global:au_GetLatest {
 	
 	$url32 = "https://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=$version&package_type=exe&language=English"
 
-	return @{ URL32 = $url32; Version = $version }
+	# Fix for changed checksum for version 8.3.0.14878: http://disq.us/p/1igzy9q
+	$actualVersion = $version
+
+	
+	if ($version.StartsWith("8.3.0.14878")) {
+		$version = "8.3.0.14879"
+	}
+	elseif ($version.StartsWith("8.3.0.14879")) {
+		Write-Error @"
+FoxitReader's current version is 8.3.0.14879 conflicting with the use of this exact
+version number to fix an old one
+"@
+	}
+	
+	return @{ URL32 = $url32; Version = $version; ActualVersion = $actualVersion }
 }
 
 # Function taken from http://stackoverflow.com/a/37663738 under CC BY-SA 3.0
