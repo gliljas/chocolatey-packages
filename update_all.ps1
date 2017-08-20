@@ -4,6 +4,10 @@ param([string[]] $Name, [string] $ForcedPackages, [string] $Root = $PSScriptRoot
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
+# Sets (confidential) environment variables like $Env:au_push and $Env:github_api_key which are
+# used below.
+& .\update_all-confidential_env_vars.ps1
+
 $Options = [ordered]@{
     WhatIf        = $au_WhatIf                              #WhatIf all packages
     Force         = $false                                  #Force all packages
