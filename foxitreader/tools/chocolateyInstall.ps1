@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url32       = 'https://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=8.3.2.25013&package_type=exe&language=English'
-$checksum32  = '47b0f9bacf8323355c38fe54db9ce215fb49630366f66e1b4d1e17417d5abb3a'
+$url32       = 'https://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=9.0.0.29935&package_type=exe&language=English'
+$checksum32  = 'd432cce767779e369bfe5c3d367aea6953abe364ca0f48dd5b0d9575d4f296b3'
 
 $packageArgs = @{
 	packageName    = 'foxitreader'
