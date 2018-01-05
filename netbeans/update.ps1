@@ -1,5 +1,9 @@
 Import-Module au
 
+function global:au_AfterUpdate ($Package)  {
+	Set-DescriptionFromReadme $Package
+}
+
 function global:au_SearchReplace {
 	@{
 		'netbeans.nuspec' = @{
@@ -18,7 +22,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 	$versionUri = 'https://netbeans.org/downloads/start.html?platform=windows&lang=en&option=javase'
-	
+
 	$versionPage = Invoke-WebRequest -Uri $versionUri -UserAgent "Update checker of Chocolatey Community Package 'Netbeans'"
 	$versionPage.Content -match 'PAGE_ARTIFACTS_LOCATION\s*=\s*".*?/([\d.]+)/' | Out-Null
   $version = $matches[1]

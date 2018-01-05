@@ -1,0 +1,1 @@
+NetBeans provides an extensible IDE with rich functionality for Java development, such as code analyzers, refactoring tools and converters, which upgrade old language constructs to newer Java 8 concepts in your code (e.g. lambdas, functional operations and method references).

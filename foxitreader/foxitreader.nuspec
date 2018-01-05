@@ -8,10 +8,9 @@
     <authors>Foxit Software Incorporated</authors>
     <owners>ComFreek H.AlanStevens</owners>
     <summary>Foxit Reader: The Best PDF Reader</summary>
-    <description><![CDATA[
-Foxit Reader: The Best PDF Reader. With Foxit Reader you can read and annotate PDF documents and fill out PDF forms.
+    <description><![CDATA[Foxit Reader: The Best PDF Reader. With Foxit Reader you can read and annotate PDF documents and fill out PDF forms.
 ### Important Notes
-1. During reinstallation and uninstallation you **must not have any open instances** of Foxit Reader.  
+1. During reinstallation and uninstallation you **must not have any open instances** of Foxit Reader.
    This includes the Foxit Reader application itself, PDFs displayed in browsers via Foxit Reader's
    browser plugin _and_ any open Windows Explorer window (Foxit Reader's shell plugins).
    Otherwise, you might encounter error dialogs during the process asking you to close all instances.

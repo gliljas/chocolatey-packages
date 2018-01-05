@@ -9,7 +9,8 @@
 		<authors>Oracle Corporation</authors>
 		<owners>ComFreek murray</owners>
 		<summary>An open source IDE for Java (SE) development supporting Java 8.</summary>
-		<description>NetBeans provides an extensible IDE with rich functionality for Java development, such as code analyzers, refactoring tools and converters, which upgrade old language constructs to newer Java 8 concepts in your code (e.g. lambdas, functional operations and method references).</description>
+		<description><![CDATA[NetBeans provides an extensible IDE with rich functionality for Java development, such as code analyzers, refactoring tools and converters, which upgrade old language constructs to newer Java 8 concepts in your code (e.g. lambdas, functional operations and method references).
+]]></description>
 		<projectUrl>https://netbeans.org/</projectUrl>
 		<docsUrl>https://netbeans.org/kb/index.html</docsUrl>
 		<packageSourceUrl>https://github.com/ComFreek/chocolatey-packages/tree/master/netbeans</packageSourceUrl>
