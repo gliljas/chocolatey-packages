@@ -15,25 +15,27 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
 	$uri = 'https://www.foxitsoftware.com/downloads/downloadForm.php?product=Foxit-Reader&language=English&platform=Windows'
 	$page = Invoke-WebRequest -Uri $uri -UserAgent "Update checker of Chocolatey Community Package 'foxitreader'"
-	
-	$version = Get-FixedQuerySelectorAll $page "select[name='version'] option:first-child" | Select -First 1 -ExpandProperty value
-	
-	$url32 = "https://www.foxitsoftware.com/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=$version&package_type=exe&language=English"
 
-	# Fix for changed checksum for version 8.3.0.14878: http://disq.us/p/1igzy9q
+	$version = Get-FixedQuerySelectorAll $page "select[name='version'] option:first-child" | Select -First 1 -ExpandProperty value
+
+	# The '/de/' part in the URL forces the server to respond with an English language setup.
+	#
+	# Without it - even with the HTTP request header "Accept-Language: en-us" - Foxit's server
+	# will deliver a setup based on the geolocation of the requesting IP.
+	$url32 = "https://www.foxitsoftware.com/de/downloads/latest.php?product=Foxit-Reader&platform=Windows&version=$version&package_type=exe&language=English"
+
 	$actualVersion = $version
 
-	
-	if ($version.StartsWith("8.3.0.14878")) {
-		$version = "8.3.0.14879"
+	# Fix for issue #5: Checksum fails due to IP-specific language redirect
+	if ($version -eq "9.0.1.1049") {
+		$version = "9.0.1.1050"
 	}
-	elseif ($version.StartsWith("8.3.0.14879")) {
-		Write-Error @"
-FoxitReader's current version is 8.3.0.14879 conflicting with the use of this exact
-version number to fix an old one
+	elseif ($version -eq "9.0.1.1050") {
+		Write-Error -Message @"
+FoxitReader's current version collides with a version used as package fix notation.
 "@
 	}
-	
+
 	return @{ URL32 = $url32; Version = $version; ActualVersion = $actualVersion }
 }
 
